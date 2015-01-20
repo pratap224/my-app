@@ -1,0 +1,20 @@
+<h1>Create details</h1>
+<%= form_tag details_create_path do %>
+<li>
+	<label for="First Name">First Name</label>
+ 	<%= text_field_tag "first_name" %>
+ </li>
+ 	<li><label for="last Name">Last Name</label>
+ 	<%= text_field_tag "last_name" %>
+ </li>
+ <li>
+ 	<label for="Phone num">Phone Num</label>
+    <%= text_field_tag "phone_num" %>
+ </li>
+    <li><label for="Address">Address</label>
+    <%= text_field_tag "address" %>
+ </li>
+ <li><div class="form-buttons">
+ <%=submit_tag ("create Details")%>  
+ </div></li>  	 			    
+<% end %>	

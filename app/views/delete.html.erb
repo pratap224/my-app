@@ -1,0 +1,6 @@
+<h2>Delete Detail</h2>
+<%=form_tag("Delete",:url=>{:action=> 'destroy', :id=>@details.id} do |f|) %>
+	<p> Delete this?</p>
+	<p class= "refference-name?"><%=@details.name %></p>
+	<%=submit_tag("Delete") %>
+	<%end%>

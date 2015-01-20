@@ -1,0 +1,22 @@
+<h1>Edit details</h1>
+
+<%=form_tag details_update_path do %>
+<%#= hidden_field_tag 'baseval', params[:id] %>
+<li>
+	<label for="First Name">First Name</label>
+ 	<%= text_field_tag (:"first_name") %>
+ </li>
+ 	<li><label for="last Name">Last Name</label>
+ 	<%= text_field_tag (:"last_name") %>
+ </li>
+ <li>
+ 	<label for="Phone num">Phone Num</label>
+    <%= text_field_tag (:"phone_num") %>
+ </li>
+    <li><label for="Address">Address</label>
+    <%= text_field_tag (:"address") %>
+ </li>
+ <div class="form-buttons">
+ <%=submit_tag ("Update Details")%>  
+ </div>  	 			    
+<% end %>	

@@ -1,0 +1,32 @@
+<h1>Articles list</h1>
+<a href="<%=articles_new_path %>">New article</a>
+<table>
+	<th>
+		Name
+	</th>
+	<th>
+		Content
+	</th>
+	<th>
+		Price
+	</th>
+   
+   		<% @articles.each do |f| %>
+   		<tr>
+		<td><%=f.name %></td>
+		<td><%=f.content %></td>
+		<td><%=f.price %> </td>
+		<td>
+			 <td><a href="<%=articles_show_path(f.id) %>">show</a></td>
+			 <td><a href="<%=articles_edit_path(f.id) %>">Edit</a></td>
+			
+		</td>
+		</tr>	
+
+   <% end %>
+	
+
+	
+	
+
+</table>

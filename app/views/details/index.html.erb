@@ -1,0 +1,27 @@
+ <h1>Details</h1>
+ <a href="<%=details_new_path %>">add new details</a>
+<table >
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Phone Num</th>
+	<th>Address</th>
+	<th>Actions</th>
+</tr>
+<% @details.each do |d| %>
+<tr>
+	<td><%= d.first_name %></td>
+	<td><%= d.last_name %></td>
+	<td><%=d.phone_num %></td>
+	<td><%=d.address %></td>
+<td>
+	 <td><a href="<%=details_show_path(d.id) %>">show</a></td>
+	<td><a href="<%=det_edit_path(d.id) %>">edit</a></td>
+	<td><a href="<%=details_destroy_path(d.id)%>">delete</a></td>
+
+</td>
+</tr>
+
+<%end %>
+	
+</table>
