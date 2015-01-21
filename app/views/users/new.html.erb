@@ -1,0 +1,16 @@
+<h1>New User</h1>
+<%=form_tag users_create_path %>
+<li>
+	<label for="first_name">First Name</label>
+	<%=text_field_tag "first_name" %>
+</li>
+<li>
+	<label for="last_name">Last Name</label>
+	<%=text_field_tag "last_name" %>
+</li>
+<li>
+	<label for="contact">contact</label>
+	<%=text_field_tag "contact" %>
+</li>
+
+<%=submit_tag("create user") %>

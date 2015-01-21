@@ -1,7 +1,6 @@
 <h1>Edit details</h1>
 
-<%=form_tag details_update_path do %>
-<%#= hidden_field_tag 'baseval', params[:id] %>
+<%= start_form_tag :action => 'update', :id => @articles %>
 <li>
 	<label for="First Name">First Name</label>
  	<%= text_field_tag (:"first_name") %>

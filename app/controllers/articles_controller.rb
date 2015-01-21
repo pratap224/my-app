@@ -21,22 +21,28 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+
     @articles = Article.find(params[:id])
   end
   def update
+
      @articles = Article.find(params[:id])
-      @articles.update_attributes(a_params)
+      
      
-      if @articless.save
+      if @articles.update_attributes(a_params)
         redirect_to(:action => 'show', :id=> @articles.id)
       else
         render :action=> 'edit'
       end
       
   end
-  def delete
+  
+  def destroy
+    @articles = Article.find(params[:id])
+    @articles.destroy
+    redirect_to :action => 'index'
   end
-
+ 
   private
 
   def a_params

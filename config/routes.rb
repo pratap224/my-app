@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/show/:id' => 'users#show', as:  'users_show'
+
+  get 'users/edit/:id' => 'users#edit',  as: 'users_edit'
+  get 'users/create'
+  post 'users/create'
+  post 'articles/update/:id' => 'users#update', as: 'users_update'
+  get   'users/destroy/:id' => 'users#destroy', as: 'users_destroy' 
   get 'articles/index'
 
   get 'articles/new'
@@ -8,11 +19,11 @@ Rails.application.routes.draw do
 
   get 'articles/edit/:id'  => 'articles#edit', as: 'articles_edit'
 
-  get 'articles/delete'
+  get 'articles/destroy/:id' => 'articles#destroy', as: 'articles_destroy'
 
   get 'articles/create'
 
-  post 'articles/update'
+  post 'articles/update/:id' => 'articles#update', as: 'aricles_update'
  
   get 'details/index'
  

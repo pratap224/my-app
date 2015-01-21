@@ -1,0 +1,17 @@
+<h1>Edit User Details</h1>
+
+<%=form_tag users_update_path do %>
+<li>
+	<label for="First Name">First Name</label>
+ 	<%= text_field_tag(:"first_name")  %>
+ </li>
+ <li>
+	<label for="Last Name">Last Name</label>
+ 	<%= text_field_tag(:"last_name")  %>
+ </li>
+ <li>
+	<label for="Contact">Contact</label>
+ 	<%= text_field_tag(:"contact")  %>
+ </li>
+ <%=submit_tag("Update Details") %>
+ <%end%>
