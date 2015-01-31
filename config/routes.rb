@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/failure'
+
   get 'users/index'
 
   get 'users/new'
@@ -26,8 +32,11 @@ Rails.application.routes.draw do
   post 'articles/update/:id' => 'articles#update', as: 'aricles_update'
  
   get 'details/index'
- 
-
+  #omniauth
+ get   '/login', :to => 'sessions#new', :as => :login
+get '/auth/:provider/callback', :to => 'sessions#create'
+get '/auth/failure', :to => 'sessions#failure'
+#####
   get 'details/new'
   post 'details/create'
   get 'details/edit/:id' => 'details#edit', as: 'det_edit'
@@ -45,7 +54,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'posts#index'
+   root 'articles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

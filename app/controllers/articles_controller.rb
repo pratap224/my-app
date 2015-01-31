@@ -29,7 +29,8 @@ class ArticlesController < ApplicationController
      @articles = Article.find(params[:id])
       
      
-      if @articles.update_attributes(a_params)
+      if 
+        @articles.update_attributes(a_params)
         redirect_to(:action => 'show', :id=> @articles.id)
       else
         render :action=> 'edit'
